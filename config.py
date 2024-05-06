@@ -1,2 +1,3 @@
 URL = 'https://stellarburgers.nomoreparties.site/'
-RESOLUTION  = 1920,1080
+EMAIL = 'korneeva2506@gmail.com'
+PASSWORD = '123456'

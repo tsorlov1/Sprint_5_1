@@ -17,6 +17,7 @@ class StellarBurgersLocators:
     BUTTON_PROFILE = (By.XPATH, "(//a[contains(@class, 'Account_link__2ETsJ')])[1]")  # Кнопка "Профиль"
     BUTTON_EXIT = (By.XPATH, "//button[contains(@class, 'Account_button__14Yp3')]")  # Кнопка "Выход"
     BUTTON_CONSTRUCTOR = (By.XPATH, "(//p[contains(@class, 'AppHeader_header')])[1]")  # Кнопка "Конструктор"
+    LOGO = (By.XPATH, "(//div[@class='AppHeader_header__logo__2D0X2'])")  # Логотип
     CONSTRUCTOR_TITLE = (By.XPATH, "//h1")  # Заголовок "Собери свой бургер"
     FILLINGS = (By.XPATH, "(//div[contains(@class, 'tab_tab__1SPyG')])[3]")  # Начинки
     BREAD = (By.XPATH, "(//div[contains(@class, 'tab_tab__1SPyG')])[1]")  # Булки
