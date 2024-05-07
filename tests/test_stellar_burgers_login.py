@@ -5,7 +5,15 @@ from locators import StellarBurgersLocators
 
 
 class Test_Stellar_Burgers_Login:
-    def test_stellar_burgers_successful_login(self, driver, login):
+    def test_stellar_burgers_successful_login(self, driver):
+        # Открой страницу https://stellarburgers.nomoreparties.site/login
+        driver.get(f'{URL}login')
+        # Выполни авторизацию
+        driver.find_element(*StellarBurgersLocators.EMAIL_FIELD_LOGIN).send_keys(EMAIL)
+        driver.find_element(*StellarBurgersLocators.PASSWORD_FIELD).send_keys(PASSWORD)
+        driver.find_element(*StellarBurgersLocators.BUTTON).click()
+        # Добавь явное ожидание для загрузки страницы
+        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(StellarBurgersLocators.BUTTON_ORDER))
         # Проверь, что появилась кнопка 'Оформить заказ'
         assert driver.find_element(*StellarBurgersLocators.BUTTON_ORDER).text == 'Оформить заказ'
 
